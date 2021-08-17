@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/White"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:cardUseCompatPadding="true">
+
+
+        <RelativeLayout
+            android:background="@drawable/rounded_corner_night_mode"
+            android:id="@+id/rlHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlVehicalDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+
+                <ImageView
+                    android:id="@+id/iv_vehical"
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_toEndOf="@+id/iv_vehical"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textColor="@color/colorGreyText"
+
+                        android:id="@+id/tv_dateandTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosansjp_bold"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="Mon, Sept 3, 23:35 AM" />
+
+                    <TextView
+                        android:textColor="@color/colorGreyText"
+
+                        android:id="@+id/tv_vahicalName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_toRightOf="@+id/tv_Person"
+                        android:text="OLA MINI,MH12 3456A"
+                        android:textSize="@dimen/_9sdp" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <View
+
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_below="@+id/rlVehicalDetails"
+                android:background="@color/secondaryLightGray" />
+
+            <LinearLayout
+                android:id="@+id/llid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view2"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+
+                    <TextView
+                        android:textColor="@color/colorGreyText"
+
+                        android:id="@+id/tvDisputNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/notosansjp_bold"
+                        android:includeFontPadding="false"
+                        android:text="ID:#MUM7656RT56"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvFilledDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="@dimen/_9sdp"
+                        android:text="Filed Date : 17 Dec, 04:27 pm"
+
+                        android:textColor="@color/colorGreyText"
+
+                        android:fontFamily="@font/notosansjp_regular"
+
+
+                        />
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/secondaryLightGray" />
+
+                <TextView
+
+                    android:id="@+id/tv_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/notosansjp_bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/gradientstartcolor"
+                    android:text="Under Review" />
+
+            </LinearLayout>
+
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_below="@+id/llid"
+                android:background="@color/secondaryLightGray" />
+
+
+            <RelativeLayout
+                android:id="@+id/addressDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+
+                        android:id="@+id/tv_myCurrentLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:drawableStart="@drawable/red_circle"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:fontFamily="@font/notosansjp_bold"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="Pick-up Location"
+                        android:textColor="@color/gradientstartcolor" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@+id/tv_myCurrentLocation"
+                        android:layout_marginStart="@dimen/_40sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:background="@color/secondaryLightGray" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/destnationAddresslayout"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view1">
+
+
+                        <TextView
+                            android:textColor="@color/colorGreyText"
+                            android:id="@+id/destnationAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:drawableStart="@drawable/triangle"
+                            android:drawablePadding="@dimen/_15sdp"
+                            android:fontFamily="@font/notosansjp_bold"
+                            android:layout_toLeftOf="@+id/ivViewInfo"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="Drop-off Location " />
+
+
+
+
+
+
+
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/ivViewInfo"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:background="@drawable/view_info" />
+
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/destnationAddresslayout"
+                        android:layout_below="@+id/tv_myCurrentLocation"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="-17dp"
+                        android:layout_marginBottom="-17dp"
+                        android:background="@color/secondaryLightGray" />
+                </RelativeLayout>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

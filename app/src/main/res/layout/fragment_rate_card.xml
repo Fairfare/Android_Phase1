@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myDynamicLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/_15sdp"
+    android:paddingEnd="@dimen/_15sdp"
+
+    >
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/llRateCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/recycler_view_rateCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:visibility="visible"
+            app:tabIndicatorColor="@color/gradientstartcolor"
+            app:tabIndicatorHeight="1dp"
+            app:tabSelectedTextColor="@color/colorText" />
+
+
+        <!-- <TextView
+             android:id="@+id/idf"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+ -->
+
+        <TextView
+            android:id="@+id/tvCarName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:weightSum="2">
+
+            <Spinner
+
+                android:id="@+id/spinner_city"
+
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_rate_card"
+                android:spinnerMode="dropdown"
+                android:visibility="gone" />
+
+
+            <Spinner
+
+                android:id="@+id/spinner_type_rate_card"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_rate_card"
+                android:spinnerMode="dropdown"
+                android:visibility="gone" />
+
+
+            <TextView
+
+                android:id="@+id/tvEmptySpinner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_spinner"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_5sdp"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+
+        <RadioGroup
+
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical" />
+
+
+
+        <!--  Effective Date-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Effective Date"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:text="The fare charges mentioned are effective from 1st March 2021."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+
+                />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@+id/tv_myCurrentLocation"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/secondaryLightGray" />
+
+        <!-- BASIC FARE-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+
+                />
+
+
+            <ImageView
+
+                android:layout_marginTop="@dimen/_3sdp"
+                android:visibility="gone"
+                android:id="@+id/rateCardIncentive"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_75sdp"
+                />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@+id/tv_myCurrentLocation"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/secondaryLightGray" />
+
+
+        <!-- WAITING CHARGES-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/wCharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWaitingCharges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+
+                />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@+id/tv_myCurrentLocation"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/secondaryLightGray" />
+
+
+        <!-- NIGHT CHARGES-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nCharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNightCharges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+
+                />
+
+            <TextView
+                android:id="@+id/tvNightChargeTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text=""
+                android:visibility="gone"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@+id/tv_myCurrentLocation"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/secondaryLightGray" />
+
+        <!-- LUGGAGE CHARGES-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cLuggage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLuggage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+
+                />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@+id/tv_myCurrentLocation"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/secondaryLightGray" />
+
+
+        <!--  TOll CHARGES-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toll Charges"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:text="Toll will be chargeable at actual."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+
+                />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@+id/tv_myCurrentLocation"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/secondaryLightGray" />
+
+
+
+        <!--  SURCHARGES-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sCharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSurCHarges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
+
+

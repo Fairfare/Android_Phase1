@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:paddingStart="@dimen/_15sdp"
+    android:paddingTop="@dimen/_30sdp"
+    android:paddingEnd="@dimen/_15sdp">
+
+
+    <LinearLayout
+        android:background="@color/colorBackground"
+
+        android:id="@+id/llLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Language"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:textColor="@color/colorGreyText"
+                android:textSize="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_1sdp"
+                android:text="Select Default Language for the App" />
+
+
+        </LinearLayout>
+
+
+        <Spinner
+            android:id="@+id/spinner_lang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/shapespinnersetting"
+            android:gravity="bottom|end"
+            android:paddingEnd="@dimen/_25sdp"
+            android:spinnerMode="dropdown"
+            android:textSize="10dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/llCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llLanguage"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/colorBackground"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.8"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:textSize="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_1sdp"
+                android:text="Select Default City" />
+
+
+        </LinearLayout>
+
+
+        <Spinner
+
+            android:layout_width="0dp"
+            android:id="@+id/spinner_city"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="1.2"
+            android:background="@drawable/shapespinnersetting"
+            android:gravity="bottom|end"
+            android:paddingEnd="@dimen/_25sdp"
+            android:spinnerMode="dropdown"
+            android:textSize="10dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llCity"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/colorBackground"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:textColor="@color/colorGreyText"
+
+                android:textSize="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_1sdp"
+                android:text="Select Default Currency" />
+
+
+        </LinearLayout>
+
+
+        <Spinner
+            android:layout_width="0dp"
+            android:id="@+id/spinner_currency"
+
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="0.9"
+            android:background="@drawable/shapespinnersetting"
+            android:gravity="bottom|end"
+            android:paddingEnd="@dimen/_25sdp"
+            android:spinnerMode="dropdown"
+            android:textSize="10dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llunit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llCurrency"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/colorBackground"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.7"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Measurement Unit"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:textColor="@color/colorGreyText"
+
+                android:textSize="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_1sdp"
+                android:text="Select Default Measurement Unit" />
+
+
+        </LinearLayout>
+
+
+        <Spinner
+            android:layout_width="0dp"
+            android:id="@+id/spinner_unit"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_weight="1.3"
+            android:background="@drawable/shapespinnersetting"
+            android:gravity="bottom|end"
+            android:paddingEnd="@dimen/_25sdp"
+            android:spinnerMode="dropdown"
+            android:textSize="10dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llunit"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/colorBackground"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time Format"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:textColor="@color/colorGreyText"
+
+                android:textSize="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_1sdp"
+                android:text="Select Default Time Format" />
+
+
+        </LinearLayout>
+
+
+        <Spinner
+            android:id="@+id/spinner_timeformat"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shapespinnersetting"
+            android:gravity="bottom|end"
+            android:paddingEnd="@dimen/_25sdp"
+
+            android:spinnerMode="dropdown"
+            android:textSize="10dp" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/shape_roundedbtn"
+        android:fontFamily="@font/notosansjp_regular"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+
+        android:textSize="@dimen/_14sdp" />
+
+
+</RelativeLayout>
+
+
